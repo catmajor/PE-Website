@@ -33,7 +33,7 @@ nav {background-color: rgba(255, 255, 255, calc(0.5 + 0.5*var(--scrollRatio))); 
   --total-max-height: calc((50vh + 2vh + 1vh + 2*var(--border-width)) + (4vh + var(--border-width)));
   --total-min-height: calc(10vh + 1vh + 0vh + 2*var(--border-width) + 4vh)
 }
-#nav-placeholder {height: var(--nav-placeholder-height); width: 100%}
+#nav-placeholder {height: var(--total-min-height); width: 100%}
 
 #menu-wrapper {position: fixed; top: var(--menu-top); height: var(--menu-height); border-bottom: var(--border-style); width: 100%; box-shadow: 0.3vh 0.3vh 0.3vh 1vh rgba(0, 0, 0, 0.1)}
 #menu {-webkit-flex-flow: horizontal no-wrap; flex-flow: horizontal no-wrap; position: relative; margin: 0; font-family: 'Josefin Sans', monospace; background-color: var(--main-blue); height: var(--menu-height)}

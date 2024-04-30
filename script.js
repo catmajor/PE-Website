@@ -10,5 +10,6 @@ function updateHeader() {
   navWrapper.style.setProperty("--scrollRatio", `${scrollRatio}`);
 }
 
+placeholder.style.height = "var(--nav-placeholder-height)"
 updateHeader();
 window.addEventListener("scroll", updateHeader);
