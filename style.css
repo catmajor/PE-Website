@@ -35,7 +35,7 @@ nav {background-color: rgba(255, 255, 255, calc(0.5 + 0.5*var(--scrollRatio))); 
 }
 #nav-placeholder {height: var(--nav-placeholder-height); width: 100%}
 
-#menu-wrapper {position: fixed; top: var(--menu-top); height: var(--menu-height); border-bottom: var(--border-style); width: 100%; box-shadow: 1px 1px 1px 3px rgba(0, 0, 0, 0.1)}
+#menu-wrapper {position: fixed; top: var(--menu-top); height: var(--menu-height); border-bottom: var(--border-style); width: 100%; box-shadow: 0.3vh 0.3vh 0.3vh 1vh rgba(0, 0, 0, 0.1)}
 #menu {-webkit-flex-flow: horizontal no-wrap; flex-flow: horizontal no-wrap; position: relative; margin: 0; font-family: 'Josefin Sans', monospace; background-color: var(--main-blue); height: var(--menu-height)}
 #menu li {-webkit-flex-grow: 2; flex-grow: 2; height: var(--menu-height)}
 #menu {display: -webkit-flex; display: flex; -webkit-justify-content: center; justify-content: center;}
@@ -51,13 +51,14 @@ nav {background-color: rgba(255, 255, 255, calc(0.5 + 0.5*var(--scrollRatio))); 
 #menu, #menu ul {-webkit-padding-start: 0; -webkit-margin-start: 0;} 
 
 main {width: 100%; height: calc(100% - 54vh - 12px); display: flex; align-items: center; flex-direction: column}
-main>div {width: calc(100% - 2vw + 2px); border-left: var(--main-yellow) 3px solid; border-right: var(--main-yellow) 3px solid; height: 100%; background-color: var(--main-blue); display: flex; justify-content: center;}
-main>div>div {width: calc(100% - 16px); border-left: var(--main-yellow) 3px solid; border-right: var(--main-yellow) 3px solid; height: 100%; background-color: white; display: flex; align-items: center; flex-direction: column}
+main>div {width: calc(100% - 2vw + var(--border-width)); border-left: var(--border-style); border-right: var(--border-style); background-color: var(--main-blue); display: flex; justify-content: center;}
+main>div>div {width: calc(100% - 3*var(--border-width)); border-left: var(--border-style); border-right: var(--border-style); background-color: white; display: flex; align-items: center; flex-direction: column}
 
-h2 {font-family: 'Josefin Sans'; margin: 1vh; font-size: 5vh}
+h2 {font-family: 'Josefin Sans'; margin: 2vh; font-size: 5vh}
 h3 {font-family: 'Josefin Sans'; color: var(--main-blue); font-size: 3vh}
 p {font-family: 'Questrial'; font-size: 2vh}
 .items {width: calc(100% - 8px - 2vw); height: auto;  background-color: var(--main-blue); border: var(--border-style); display: flex; margin: 2vh 0 2vh 0;}
+.items:first-of-type {margin-top: 0}
 .items>* {width: calc(100% - 3vw); margin: 1vh 0 1vh 0; border: var(--border-style); border-left: none; border-right: none; }
 .items>*:first-of-type {margin-left: 1vw; margin-right: 0.5vw}
 .items>*:last-of-type {margin-left: 0.5vw; margin-right: 1vw}
