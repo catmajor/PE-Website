@@ -9,7 +9,13 @@ function updateHeader() {
   scrollRatio = scrollRatio<=0?0:scrollRatio;
   navWrapper.style.setProperty("--scrollRatio", `${scrollRatio}`);
 }
+function onResize () {
+  updateHeader();
+  let height = getComputedStyle(navWrapper).getPropertyValue("--nav-placeholder-height");
+  placeholder.style.height = height;
+}
 
-placeholder.style.height = "var(--nav-placeholder-height)"
+
 updateHeader();
 window.addEventListener("scroll", updateHeader);
+window.addEventListener("resize", onResize())
