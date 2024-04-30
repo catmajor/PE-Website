@@ -1,0 +1,65 @@
+:root {
+  --main-blue: #002f56;
+  --main-yellow: #ffc300;
+  --border-style: var(--main-yellow) var(--border-width) solid;
+  --border-width: 0.4vmin;
+}
+
+html {height: 100%; width: 100%; padding: 0; margin: 0}
+body {padding: 0; margin: 0; background-color: white}
+h1 {font-family: 'Josefin Sans'; color: var(--main-blue)}
+nav {background-color: rgba(255, 255, 255, calc(0.5 + 0.5*var(--scrollRatio))); height: var(--nav-height); top: var(--nav-margin-top); width: calc(100% - 2vw); left: calc(1vw); border: var(--border-style); display: flex; align-items: center; position: fixed; z-index: 99; border-left: none; border-right: none}
+#nav-background {height: var(--nav-height); top: calc(var(--nav-margin-top) + var(--border-width)); width: calc(100% - 2vw); left: calc(1vw); position: fixed; z-index: 97; background: url("img/banner.jpg"); background-size: cover; background-position: center;}
+#items-wrapper {width: 100%; height: 100%; position: relative}
+#items {width: auto; position: absolute; top: 50%; left: calc(50% * var(--scrollRatio)); transform: translate(calc(-50% * var(--scrollRatio)), -50%); display: flex; align-items: center}
+#items figure {padding: 0; margin: 0}
+#items img {padding: 0; margin: 0; height: calc(6vh + 24vh*var(--scrollRatio));}
+#items h1 {--fs-d: calc(0.5px + 2px*var(--scrollRatio)); --fs-dn: calc(var(--fs-d)*-1); font-size: calc(2.4vh + 9.6vh*var(--scrollRatio)); padding: 0; margin-left: calc(-1*(1.5vh + 6vh*var(--scrollRatio))); margin-bottom: calc(1.5vh + 3.5vh*var(--scrollRatio)); text-shadow: var(--fs-dn) var(--fs-dn) 0px var(--main-yellow), var(--fs-d) var(--fs-d) 0px var(--main-yellow), var(--fs-dn) var(--fs-d) 0px var(--main-yellow),  var(--fs-d) var(--fs-dn) 0px var(--main-yellow);}
+
+
+#nav-wrapper {background-color: var(--main-blue); width: 100%; height: var(--wrapper-height); position: fixed; z-index: 98; border-bottom: var(--border-style);}
+.nav-vars {
+  --scrollRatio: 0;
+  --nav-height: calc(40vh * var(--scrollRatio) + 10vh);
+  --nav-margin-top: calc(1vh + 1vh*var(--scrollRatio));
+  --nav-margin-bottom: calc(1vh*var(--scrollRatio));
+  --wrapper-height: calc(var(--nav-height) + var(--nav-margin-top) + var(--nav-margin-bottom) + 2*var(--border-width));
+  --menu-height: 4vh;
+  --menu-wrapper-height: calc(var(--menu-height) + var(--border-width));
+  --menu-top: calc(var(--wrapper-height));
+  --nav-placeholder-height: var(--total-max-height);
+  --menu-border-margin: calc(1vw);
+  /*wrapper height + menu wrapper height*/
+  --total-max-height: calc((50vh + 2vh + 1vh + 2*var(--border-width)) + (4vh + var(--border-width)));
+  --total-min-height: calc(10vh + 1vh + 0vh + 2*var(--border-width) + 4vh)
+}
+#nav-placeholder {height: var(--nav-placeholder-height); width: 100%}
+
+#menu-wrapper {position: fixed; top: var(--menu-top); height: var(--menu-height); border-bottom: var(--border-style); width: 100%; box-shadow: 1px 1px 1px 3px rgba(0, 0, 0, 0.1)}
+#menu {-webkit-flex-flow: horizontal no-wrap; flex-flow: horizontal no-wrap; position: relative; margin: 0; font-family: 'Josefin Sans', monospace; background-color: var(--main-blue); height: var(--menu-height)}
+#menu li {-webkit-flex-grow: 2; flex-grow: 2; height: var(--menu-height)}
+#menu {display: -webkit-flex; display: flex; -webkit-justify-content: center; justify-content: center;}
+#menu, #menu li li {list-style: none;}
+#menu a {height: inherit; color: var(--main-blue); display: flex; align-items: center; justify-content: center; text-decoration: none; background-color: white; font-size: 2vh}
+#menu>li {margin: 0 0.5vw; position: relative; border-top: var(--border-style); border-bottom: none; margin-top: calc(-1*var(--border-width))}
+#menu>li:first-of-type {margin-left:var(--menu-border-margin);}
+#menu>li:last-of-type {margin-right: var(--menu-border-margin);}
+#menu a:hover, #plat a:focus {background: #ddd; color: black;}
+#menu li ul {visibility: hidden; opacity: 0; margin: 0; width: 100%; position: absolute; height: inherit}
+#menu li:hover ul {visibility: visible; opacity: 1; border-top: var(--border-style)}
+#menu li ul li { border-bottom: var(--border-style)}
+#menu, #menu ul {-webkit-padding-start: 0; -webkit-margin-start: 0;} 
+
+main {width: 100%; height: calc(100% - 54vh - 12px); display: flex; align-items: center; flex-direction: column}
+main>div {width: calc(100% - 2vw + 2px); border-left: var(--main-yellow) 3px solid; border-right: var(--main-yellow) 3px solid; height: 100%; background-color: var(--main-blue); display: flex; justify-content: center;}
+main>div>div {width: calc(100% - 16px); border-left: var(--main-yellow) 3px solid; border-right: var(--main-yellow) 3px solid; height: 100%; background-color: white; display: flex; align-items: center; flex-direction: column}
+
+h2 {font-family: 'Josefin Sans'; margin: 1vh; font-size: 5vh}
+h3 {font-family: 'Josefin Sans'; color: var(--main-blue); font-size: 3vh}
+p {font-family: 'Questrial'; font-size: 2vh}
+.items {width: calc(100% - 8px - 2vw); height: auto;  background-color: var(--main-blue); border: var(--border-style); display: flex; margin: 2vh 0 2vh 0;}
+.items>* {width: calc(100% - 3vw); margin: 1vh 0 1vh 0; border: var(--border-style); border-left: none; border-right: none; }
+.items>*:first-of-type {margin-left: 1vw; margin-right: 0.5vw}
+.items>*:last-of-type {margin-left: 0.5vw; margin-right: 1vw}
+.items .text {background-color: white; }
+.items figure {color: white; font-size: 5vh}
