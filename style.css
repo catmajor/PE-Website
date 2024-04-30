@@ -54,7 +54,7 @@ main {width: 100%; height: calc(100% - 54vh - 12px); display: flex; align-items:
 main>div {width: calc(100% - 2vw + var(--border-width)); border-left: var(--border-style); border-right: var(--border-style); background-color: var(--main-blue); display: flex; justify-content: center;}
 main>div>div {width: calc(100% - 3*var(--border-width)); border-left: var(--border-style); border-right: var(--border-style); background-color: white; display: flex; align-items: center; flex-direction: column}
 
-h2 {font-family: 'Josefin Sans'; margin: 2vh; font-size: 5vh}
+h2 {font-family: 'Josefin Sans'; margin: 3vh 0 2vh 0; font-size: 5vh}
 h3 {font-family: 'Josefin Sans'; color: var(--main-blue); font-size: 3vh}
 p {font-family: 'Questrial'; font-size: 2vh}
 .items {width: calc(100% - 8px - 2vw); height: auto;  background-color: var(--main-blue); border: var(--border-style); display: flex; margin: 2vh 0 2vh 0;}
