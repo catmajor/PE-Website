@@ -1,5 +1,6 @@
 :root {
   --main-blue: #002f56;
+  --main-blue-rgb: 0, 47, 86;
   --main-yellow: #ffc300;
   --border-style: var(--main-yellow) var(--border-width) solid;
   --border-width: 0.4vmin;
@@ -36,7 +37,7 @@ nav {background-color: rgba(255, 255, 255, calc(0.5 + 0.5*var(--scrollRatio))); 
 }
 #nav-placeholder {height: var(--total-min-height); width: 100%}
 
-#menu-wrapper {position: fixed; top: var(--menu-top); height: var(--menu-height); border-bottom: var(--border-style); width: 100%; box-shadow: 0.3vh 0.3vh 0.3vh 1vh rgba(0, 0, 0, 0.1)}
+#menu-wrapper {position: fixed; top: var(--menu-top); height: var(--menu-height); border-bottom: var(--border-style); width: 100%; box-shadow: 0.3vh 0.3vh 0.3vh 1vh rgba(var(--main-blue-rgb), 0.1)}
 #menu {-webkit-flex-flow: horizontal no-wrap; flex-flow: horizontal no-wrap; position: relative; margin: 0; font-family: 'Josefin Sans', monospace; background-color: var(--main-blue); height: var(--menu-height)}
 #menu li {-webkit-flex-grow: 2; flex-grow: 2; height: var(--menu-height)}
 #menu {display: -webkit-flex; display: flex; -webkit-justify-content: center; justify-content: center;}
