@@ -67,7 +67,7 @@ p {font-family: 'Questrial'; font-size: 2vh}
 
 @media (orientation: portrait) {
   :root {
-    
+    --border-width: 0.8vmin
   }
   .nav-vars {
     --menu-height: 8vh;
