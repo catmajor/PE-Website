@@ -13,9 +13,10 @@ function onResize () {
   updateHeader();
   let height = getComputedStyle(navWrapper).getPropertyValue("--nav-placeholder-height");
   placeholder.style.height = height;
+  console.log(height)
 }
 
-
+onResize();
 updateHeader();
 window.addEventListener("scroll", updateHeader);
-window.addEventListener("resize", onResize())
+window.addEventListener("resize", onResize);
