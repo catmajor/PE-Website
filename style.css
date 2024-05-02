@@ -16,7 +16,20 @@ nav {background-color: rgba(255, 255, 255, calc(0.5 + 0.5*var(--scrollRatio))); 
 #items {width: auto; position: absolute; top: 50%; left: calc(50% * var(--scrollRatio)); transform: translate(calc(-50% * var(--scrollRatio)), -50%); display: flex; align-items: center}
 #items figure {padding: 0; margin: 0}
 #items img {padding: 0; margin: 0; height: calc(6vh + 24vh*var(--scrollRatio));}
-#items h1 {--fs-d: calc(0.1vh + 0.4vh*var(--scrollRatio)); --fs-dn: calc(var(--fs-d)*-1); --fs-blur: 0.2vh; white-space: nowrap; font-size: calc(2.4vh + 9.6vh*var(--scrollRatio)); padding: 0; margin-left: calc(-1*(1.5vh + 6vh*var(--scrollRatio))); margin-bottom: calc(1.5vh + 3.5vh*var(--scrollRatio)); text-shadow: var(--fs-dn) var(--fs-dn) var(--fs-blur) var(--main-yellow), var(--fs-d) var(--fs-d) var(--fs-blur) var(--main-yellow), var(--fs-dn) 0px var(--fs-blur) var(--main-yellow), var(--fs-d) 0px var(--fs-blur) var(--main-yellow), 0px var(--fs-dn) var(--fs-blur)  var(--main-yellow), 0px var(--fs-d) var(--fs-blur) var(--main-yellow);}
+#items h1 {
+  --fs-d: calc(0.1vh + 0.4vh*var(--scrollRatio)); --fs-dn: calc(var(--fs-d)*-1); --fs-blur: 0.2vh;
+  white-space: nowrap; font-size: calc(2.4vh + 9.6vh*var(--scrollRatio)); padding: 0; margin-left: calc(-1*(1.5vh + 7vh*var(--scrollRatio))); margin-bottom: calc(1.4vh + 3.5vh*var(--scrollRatio)); 
+  text-shadow: 
+    var(--fs-dn) var(--fs-dn) var(--fs-blur) var(--main-yellow),
+    var(--fs-d) var(--fs-d) var(--fs-blur) var(--main-yellow),
+    var(--fs-dn) 0px var(--fs-blur) var(--main-yellow),
+    var(--fs-d) 0px var(--fs-blur) var(--main-yellow),
+    0px var(--fs-dn) var(--fs-blur)  var(--main-yellow),
+    0px var(--fs-d) var(--fs-blur) var(--main-yellow),
+    var(--fs-dn) var(--fs-d) var(--fs-blur) var(--main-yellow),
+    var(--fs-d) var(--fs-dn) var(--fs-blur) var(--main-yellow)
+    ;
+}
 
 
 #nav-wrapper {background-color: var(--main-blue); width: 100%; height: var(--wrapper-height); position: fixed; z-index: 98; border-bottom: var(--border-style);}
@@ -90,7 +103,7 @@ footer>div {margin: 4vh 3vw 4vh 3vw; display: flex; justify-content: center; fle
     --total-max-height: calc((50vh + 1vh + 1vh + 2*var(--border-width)) + (8vh + var(--border-width)));
     --total-min-height: calc(10vh + 1vh + 0vh + 2*var(--border-width) + 8vh)
   }
-  #items h1 {font-size: calc(4.8vw + 9.6vw*var(--scrollRatio)); margin-left: calc(-1*(3vw + 6vw*var(--scrollRatio))); margin-bottom: calc(3vw + 3.5vw*var(--scrollRatio))}
+  #items h1 {font-size: calc(4.8vw + 9.6vw*var(--scrollRatio)); margin-left: calc(-1*(3vw + 7vw*var(--scrollRatio))); margin-bottom: calc(3vw + 3.5vw*var(--scrollRatio))}
   #items img {height: calc(12vw + 24vw*var(--scrollRatio))}
   main>div {width: calc(100% - 6vw + var(--border-width))}
   .items {flex-direction: column}
