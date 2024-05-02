@@ -70,11 +70,11 @@ p {font-family: 'Questrial'; font-size: 16px; font-size: 2rem;}
 .text p {width: calc(100% - 2vmin); margin-left: 1vmin}
 footer {min-height: 20vmin; background-color: var(--main-blue); border-top: var(--border-style); display: flex; justify-content: center;}
 footer p {margin: 0}
-footer>div {margin: 4vh 0 4vh 0; display: flex; justify-content: center; flex-direction: column}
-#copyright {max-width: calc(60% - 3vw + var(--border-width)); margin-right: 2vw}
+footer>div {margin: 4vh 3vw 4vh 3vw; display: flex; justify-content: center; flex-direction: column}
+#copyright {max-width: calc(60% - var(--border-width)); margin-right: 2vw}
 #border {width: var(--border-width); min-height: inherit; background-color: var(--main-yellow)}
 #copyright p {font-size: 1.5rem; color: white}
-#information {width: calc(40% - 3vw); margin-left: 2vw}
+#information {width: calc(40%); margin-left: 2vw}
 .school-name {color: var(--main-yellow); font-size: 4rem; font-family: 'Josefin Sans'; overflow-x: hidden}
 .address {color: white; font-size: 1.5rem}
 
