@@ -53,10 +53,10 @@ nav {background-color: rgba(255, 255, 255, calc(0.5 + 0.5*var(--scrollRatio))); 
 #menu, #menu ul {-webkit-padding-start: 0; -webkit-margin-start: 0;} 
 
 main {width: 100%; height: calc(100% - 54vh - 12px); display: flex; align-items: center; flex-direction: column}
-main>div {width: calc(100% - 2vw + var(--border-width)); border-left: var(--border-style); border-right: var(--border-style); background-color: var(--main-blue); display: flex; justify-content: center;}
+main>div {width: calc(100% - 4vw + var(--border-width)); border-left: var(--border-style); border-right: var(--border-style); background-color: var(--main-blue); display: flex; justify-content: center;}
 main>div>div {width: calc(100% - 3*var(--border-width)); border-left: var(--border-style); border-right: var(--border-style); background-color: white; display: flex; align-items: center; flex-direction: column}
 
-h2 {font-family: 'Josefin Sans'; margin: 3vh 0 2vh 0; font-size: 40px; font-size: 5rem; text-align: center}
+h2 {font-family: 'Josefin Sans'; margin: 3vh 0 2vh 0; font-size: 40px; font-size: 5rem; text-align: center; color: var(--main-blue)}
 h3 {font-family: 'Josefin Sans'; color: var(--main-blue); font-size: 24px; font-size: 3rem}
 p {font-family: 'Questrial'; font-size: 16px; font-size: 2rem;}
 .items {width: calc(100% - 8px - 2vw); height: auto;  background-color: var(--main-blue); border: var(--border-style); display: flex; margin: 2vh 0 2vh 0;}
