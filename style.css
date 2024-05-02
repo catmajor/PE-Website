@@ -77,6 +77,8 @@ footer>div {margin: 4vh 3vw 4vh 3vw; display: flex; justify-content: center; fle
 #information {width: calc(40%); margin-left: 2vw}
 .school-name {color: var(--main-yellow); font-size: 4rem; font-family: 'Josefin Sans'; overflow-x: hidden}
 .address {color: white; font-size: 1.5rem}
+.credit {font-size: 2rem; font-family: 'Questrial'; color: white}
+.credit a {font-size: 2rem; font-family: 'Questrial'; color: var(--main-yellow)}
 
 @media (orientation: portrait) {
   :root {
@@ -97,6 +99,8 @@ footer>div {margin: 4vh 3vw 4vh 3vw; display: flex; justify-content: center; fle
   .items>*:last-of-type {margin: 1vh 1vw 1vh 1vw}
   .school-name {font-size: 5vw}
   .address {font-size: 2vw}
+  .credit {font-size: 2.5vw}
+  .credit a {font-size: 2.5vw}
   #copyright p {font-size: 2vw}
 }
 
