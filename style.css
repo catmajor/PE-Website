@@ -66,6 +66,8 @@ p {font-family: 'Questrial'; font-size: 2vh}
 .items>*:last-of-type {margin-left: 0.5vw; margin-right: 1vw}
 .items .text {background-color: white; }
 .items figure {color: white; font-size: 5vh}
+.text h3 {width: calc(100% - 2vmin); margin-left: 1vmin}
+.text p {width: calc(100% - 2vmin); margin-left: 1vmin}
 
 @media (orientation: portrait) {
   :root {
