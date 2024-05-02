@@ -95,6 +95,9 @@ footer>div {margin: 4vh 0 4vh 0; display: flex; justify-content: center; flex-di
   .items>* {margin: 1vh 1vw 1vh 1vw; width: calc(100% - 2vw)}
   .items>*:first-of-type {margin: 1vh 1vw 1vh 1vw}
   .items>*:last-of-type {margin: 1vh 1vw 1vh 1vw}
+  .school-name {font-size: 7vw}
+  .address {font-size: 2.6vw}
+  #copyright p {font-size: 2.6vw}
 }
 
 @media (max-height: 50rem) {
