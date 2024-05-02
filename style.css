@@ -6,7 +6,7 @@
   --border-width: 0.4vmin;
 }
 
-html {height: 100%; width: 100%; padding: 0; margin: 0}
+html {height: 100%; width: 100%; padding: 0; margin: 0; font-size: 62.5%}
 .hidden {display: none; opacity: 0}
 body {padding: 0; margin: 0; background-color: white}
 h1 {font-family: 'Josefin Sans'; color: var(--main-blue)}
@@ -16,7 +16,7 @@ nav {background-color: rgba(255, 255, 255, calc(0.5 + 0.5*var(--scrollRatio))); 
 #items {width: auto; position: absolute; top: 50%; left: calc(50% * var(--scrollRatio)); transform: translate(calc(-50% * var(--scrollRatio)), -50%); display: flex; align-items: center}
 #items figure {padding: 0; margin: 0}
 #items img {padding: 0; margin: 0; height: calc(6vh + 24vh*var(--scrollRatio));}
-#items h1 {--fs-d: calc(0.5px + 2px*var(--scrollRatio)); --fs-dn: calc(var(--fs-d)*-1); white-space: nowrap; font-size: calc(2.4vh + 9.6vh*var(--scrollRatio)); padding: 0; margin-left: calc(-1*(1.5vh + 6vh*var(--scrollRatio))); margin-bottom: calc(1.5vh + 3.5vh*var(--scrollRatio)); text-shadow: var(--fs-dn) var(--fs-dn) 0px var(--main-yellow), var(--fs-d) var(--fs-d) 0px var(--main-yellow), var(--fs-dn) var(--fs-d) 0px var(--main-yellow),  var(--fs-d) var(--fs-dn) 0px var(--main-yellow);}
+#items h1 {--fs-d: calc(0.1vh + 0.4vh*var(--scrollRatio)); --fs-dn: calc(var(--fs-d)*-1); --fs-blur: 0.2vh; white-space: nowrap; font-size: calc(2.4vh + 9.6vh*var(--scrollRatio)); padding: 0; margin-left: calc(-1*(1.5vh + 6vh*var(--scrollRatio))); margin-bottom: calc(1.5vh + 3.5vh*var(--scrollRatio)); text-shadow: var(--fs-dn) var(--fs-dn) var(--fs-blur) var(--main-yellow), var(--fs-d) var(--fs-d) var(--fs-blur) var(--main-yellow), var(--fs-dn) 0px var(--fs-blur) var(--main-yellow), var(--fs-d) 0px var(--fs-blur) var(--main-yellow), 0px var(--fs-dn) var(--fs-blur)  var(--main-yellow), 0px var(--fs-d) var(--fs-blur) var(--main-yellow);}
 
 
 #nav-wrapper {background-color: var(--main-blue); width: 100%; height: var(--wrapper-height); position: fixed; z-index: 98; border-bottom: var(--border-style);}
@@ -42,7 +42,7 @@ nav {background-color: rgba(255, 255, 255, calc(0.5 + 0.5*var(--scrollRatio))); 
 #menu li {-webkit-flex-grow: 2; flex-grow: 2; height: var(--menu-height)}
 #menu {display: -webkit-flex; display: flex; -webkit-justify-content: center; justify-content: center;}
 #menu, #menu li li {list-style: none;}
-#menu a {height: inherit; color: var(--main-blue); display: flex; align-items: center; justify-content: center; text-decoration: none; background-color: white; font-size: 2vh}
+#menu a {height: inherit; color: var(--main-blue); display: flex; align-items: center; justify-content: center; text-decoration: none; background-color: white; font-size: 16px; font-size: 2rem}
 #menu>li {margin: 0 0.5vw; position: relative; border-top: var(--border-style); border-bottom: none; margin-top: calc(-1*var(--border-width))}
 #menu>li:first-of-type {margin-left:var(--menu-border-margin);}
 #menu>li:last-of-type {margin-right: var(--menu-border-margin);}
@@ -56,9 +56,9 @@ main {width: 100%; height: calc(100% - 54vh - 12px); display: flex; align-items:
 main>div {width: calc(100% - 2vw + var(--border-width)); border-left: var(--border-style); border-right: var(--border-style); background-color: var(--main-blue); display: flex; justify-content: center;}
 main>div>div {width: calc(100% - 3*var(--border-width)); border-left: var(--border-style); border-right: var(--border-style); background-color: white; display: flex; align-items: center; flex-direction: column}
 
-h2 {font-family: 'Josefin Sans'; margin: 3vh 0 2vh 0; font-size: 5vh; text-align: center}
-h3 {font-family: 'Josefin Sans'; color: var(--main-blue); font-size: 3vh}
-p {font-family: 'Questrial'; font-size: 2vh}
+h2 {font-family: 'Josefin Sans'; margin: 3vh 0 2vh 0; font-size: 40px; font-size: 5rem; text-align: center}
+h3 {font-family: 'Josefin Sans'; color: var(--main-blue); font-size: 24px; font-size: 3rem}
+p {font-family: 'Questrial'; font-size: 16px; font-size: 2rem;}
 .items {width: calc(100% - 8px - 2vw); height: auto;  background-color: var(--main-blue); border: var(--border-style); display: flex; margin: 2vh 0 2vh 0;}
 .items:first-of-type {margin-top: 0}
 .items>* {width: calc(100% - 3vw); margin: 1vh 0 1vh 0; border: var(--border-style); border-left: none; border-right: none; }
@@ -68,6 +68,15 @@ p {font-family: 'Questrial'; font-size: 2vh}
 .items figure {color: white; font-size: 5vh}
 .text h3 {width: calc(100% - 2vmin); margin-left: 1vmin}
 .text p {width: calc(100% - 2vmin); margin-left: 1vmin}
+footer {min-height: 20vmin; background-color: var(--main-blue); border-top: var(--border-style); display: flex; justify-content: center;}
+footer p {margin: 0}
+footer>div {margin: 4vh 0 4vh 0; display: flex; justify-content: center; flex-direction: column}
+#copyright {max-width: calc(60% - 3vw + var(--border-width)); margin-right: 2vw}
+#border {width: var(--border-width); min-height: inherit; background-color: var(--main-yellow)}
+#copyright p {font-size: 1.5rem; color: white}
+#information {width: calc(40% - 3vw); margin-left: 2vw}
+.school-name {color: var(--main-yellow); font-size: 4rem; font-family: 'Josefin Sans'; overflow-x: hidden}
+.address {color: white; font-size: 1.5rem}
 
 @media (orientation: portrait) {
   :root {
@@ -86,4 +95,8 @@ p {font-family: 'Questrial'; font-size: 2vh}
   .items>* {margin: 1vh 1vw 1vh 1vw; width: calc(100% - 2vw)}
   .items>*:first-of-type {margin: 1vh 1vw 1vh 1vw}
   .items>*:last-of-type {margin: 1vh 1vw 1vh 1vw}
+}
+
+@media (max-height: 50rem) {
+  #menu a {font-size: 3vh !important;}
 }
