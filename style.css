@@ -4,9 +4,12 @@
   --main-yellow: #ffc300;
   --border-style: var(--main-yellow) var(--border-width) solid;
   --border-width: 0.4vmin;
+  /*wrapper height + menu wrapper height*/
+  --total-max-height: calc((50vh + 2vh + 1vh + 2*var(--border-width)) + (4vh + var(--border-width)));
+  --total-min-height: calc(10vh + 1vh + 0vh + 2*var(--border-width) + 4vh);
 }
 
-html {height: 100%; width: 100%; padding: 0; margin: 0; font-size: 62.5%}
+html {height: 100%; width: 100%; padding: 0; margin: 0; font-size: 62.5%; scroll-padding-top: var(--total-min-height)}
 .hidden {display: none; opacity: 0}
 body {padding: 0; margin: 0; background-color: white}
 h1 {font-family: 'Josefin Sans'; color: var(--main-blue)}
@@ -44,9 +47,6 @@ nav {background-color: rgba(255, 255, 255, calc(0.5 + 0.5*var(--scrollRatio))); 
   --menu-top: calc(var(--wrapper-height));
   --nav-placeholder-height: var(--total-max-height);
   --menu-border-margin: calc(1vw);
-  /*wrapper height + menu wrapper height*/
-  --total-max-height: calc((50vh + 2vh + 1vh + 2*var(--border-width)) + (4vh + var(--border-width)));
-  --total-min-height: calc(10vh + 1vh + 0vh + 2*var(--border-width) + 4vh)
 }
 #nav-placeholder {height: var(--total-min-height); width: 100%}
 
@@ -61,6 +61,7 @@ nav {background-color: rgba(255, 255, 255, calc(0.5 + 0.5*var(--scrollRatio))); 
 #menu>li:last-of-type {margin-right: var(--menu-border-margin);}
 #menu a:hover, #plat a:focus {background: #ddd; color: black;}
 #menu li ul {visibility: hidden; opacity: 0; margin: 0; width: 100%; position: absolute; height: inherit}
+#menu>li:hover>a , #menu>li:focus>a {background: #ddd; color: black}
 #menu li:hover ul {visibility: visible; opacity: 1; border-top: var(--border-style)}
 #menu li ul li { border-bottom: var(--border-style)}
 #menu, #menu ul {-webkit-padding-start: 0; -webkit-margin-start: 0;} 
