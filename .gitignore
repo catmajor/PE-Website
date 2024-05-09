@@ -1,3 +1,4 @@
 node_modules/
 img/
-.replit/
+.replit
+replit.nix
