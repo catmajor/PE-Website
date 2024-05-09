@@ -74,13 +74,23 @@ h3 {font-family: 'Josefin Sans'; color: var(--main-blue); font-size: 24px; font-
 p {font-family: 'Questrial'; font-size: 16px; font-size: 2rem;}
 .items {width: calc(100% - 8px - 2vw); height: auto;  background-color: var(--main-blue); border: var(--border-style); display: flex; margin: 2vh 0 2vh 0;}
 .items:first-of-type {margin-top: 0}
-.items>* {width: calc(100% - 3vw); margin: 1vh 0 1vh 0; border: var(--border-style); border-left: none; border-right: none; }
-.items>*:first-of-type {margin-left: 1vw; margin-right: 0.5vw}
-.items>*:last-of-type {margin-left: 0.5vw; margin-right: 1vw}
+.items>* {width: calc(100%); margin: 1vh 0.5vw 1vh 0.5vw; border: var(--border-style); border-left: none; border-right: none; }
+.items>*:first-child {margin-left: 1vw !important; margin-right: 0.5vw}
+.items>*:last-child {margin-left: 0.5vw; margin-right: 1vw !important;}
 .items .text {background-color: white; }
 .items figure {color: white; font-size: 5vh}
 .text h3 {width: calc(100% - 2vmin); margin-left: 1vmin}
 .text p {width: calc(100% - 2vmin); margin-left: 1vmin}
+.staff {border-left: unset; border-right: unset; display: grid; grid-template-columns: 50% 50%; width: 100% !important; margin: 1vh 1vw 1vh 1vw !important; border: var(--border-style); column-gap: 1vw; row-gap: 2vh; border-top: none; border-bottom: none;}
+.staff .title {grid-column-start: 1; grid-column-end: 3; height: 10vh; font-size: 24px; font-size: 3rem; font-family: 'Josefin Sans'; color: white; border: var(--border); display: flex; align-items: center; justify-content: center}
+.staff .title h4 {border: var(--border-style); border-left: none; border-right: none; margin: 0; padding: 1vh 0 0.5vh 0}
+.staff .member {min-height: 10vh; display: flex; align-items: center; justify-content: center; }
+.member figure {min-height:inherit; margin: 0; display: flex; align-items: center; justify-content: center}
+.member figure img {height: 80px; height: 10rem; border-radius: 100%}
+.member .description {border: var(--border-style); border-left: none; border-right: none; padding: 1vh 0 0.5vh 0; margin-left: 0.5vw;}
+.member .description>* {padding: 0; margin: 0}
+.member .description h5 {font-family: 'Josefin Sans'; font-size: 16px; font-size: 2rem; color: var(--main-yellow)}
+.member .description h6 {font-family: 'Questrial'; font-size: 12px; font-size: 1.5rem; color: white;}
 footer {min-height: 20vmin; background-color: var(--main-blue); border-top: var(--border-style); display: flex; justify-content: center;}
 footer p {margin: 0}
 footer>div {margin: 4vh 3vw 4vh 3vw; display: flex; justify-content: center; flex-direction: column}
@@ -107,9 +117,10 @@ footer>div {margin: 4vh 3vw 4vh 3vw; display: flex; justify-content: center; fle
   #items img {height: calc(12vw + 24vw*var(--scrollRatio))}
   main>div {width: calc(100% - 6vw + var(--border-width))}
   .items {flex-direction: column}
-  .items>* {margin: 1vh 1vw 1vh 1vw; width: calc(100% - 2vw)}
+  .items>* {margin: 1vh 1vw 1vh 1vw; width: 100%}
   .items>*:first-of-type {margin: 1vh 1vw 1vh 1vw}
   .items>*:last-of-type {margin: 1vh 1vw 1vh 1vw}
+  .staff {grid-template-columns: 100%}
   .school-name {font-size: 5vw}
   .address {font-size: 2vw}
   .credit {font-size: 2.5vw}
