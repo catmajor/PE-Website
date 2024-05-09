@@ -78,14 +78,15 @@ p {font-family: 'Questrial'; font-size: 16px; font-size: 2rem;}
 .items>*:first-child {margin-left: 1vw !important; margin-right: 0.5vw}
 .items>*:last-child {margin-left: 0.5vw; margin-right: 1vw !important;}
 .items .text {background-color: white; }
-.items figure {color: white; font-size: 5vh}
+.items figure {color: white; font-size: 5vh; position: relative; display: flex; align-items: center; justify-content: center;}
+.items figure img {width: 100%; max-height: calc(100%-2vh)}
 .text h3 {width: calc(100% - 2vmin); margin-left: 1vmin}
 .text p {width: calc(100% - 2vmin); margin-left: 1vmin}
 .staff {border-left: unset; border-right: unset; display: grid; grid-template-columns: 50% 50%; width: 100% !important; margin: 1vh 1vw 1vh 1vw !important; border: var(--border-style); column-gap: 1vw; row-gap: 2vh; border-top: none; border-bottom: none;}
 .staff .title {grid-column-start: 1; grid-column-end: 3; height: 10vh; font-size: 24px; font-size: 3rem; font-family: 'Josefin Sans'; color: white; border: var(--border); display: flex; align-items: center; justify-content: center}
 .staff .title h4 {border: var(--border-style); border-left: none; border-right: none; margin: 0; padding: 1vh 0 0.5vh 0}
 .staff .member {min-height: 10vh; display: flex; align-items: center; justify-content: center; }
-.member figure {min-height:inherit; margin: 0; display: flex; align-items: center; justify-content: center}
+.member figure {min-height:inherit; margin: 0; display: flex; align-items: center; justify-content: center;}
 .member figure img {height: 80px; height: 10rem; border-radius: 100%}
 .member .description {border: var(--border-style); border-left: none; border-right: none; padding: 1vh 0 0.5vh 0; margin-left: 0.5vw;}
 .member .description>* {padding: 0; margin: 0}
