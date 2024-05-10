@@ -119,10 +119,10 @@ footer>div {margin: 4vh 3vw 4vh 3vw; display: flex; justify-content: center; fle
   #items img {height: calc(12vw + 24vw*var(--scrollRatio))}
   main>div {width: calc(100% - 6vw + var(--border-width))}
   .items {flex-direction: column}
-  .items>* {margin: 1vh 1vw 1vh 1vw; width: 100%}
+  .items>* {margin: 1vh 1vw 1vh 1vw; width: auto}
   .items>*:first-of-type {margin: 1vh 1vw 1vh 1vw}
   .items>*:last-of-type {margin: 1vh 1vw 1vh 1vw}
-  .staff {grid-template-columns: 100%}
+  .staff {grid-template-columns: 100%; width: auto}
   .school-name {font-size: 5vw}
   .address {font-size: 2vw}
   .credit {font-size: 2.5vw}
