@@ -122,7 +122,7 @@ footer>div {margin: 4vh 3vw 4vh 3vw; display: flex; justify-content: center; fle
   .items>* {margin: 1vh 1vw 1vh 1vw; width: auto}
   .items>*:first-of-type {margin: 1vh 1vw 1vh 1vw}
   .items>*:last-of-type {margin: 1vh 1vw 1vh 1vw}
-  .staff {grid-template-columns: 100%; width: auto}
+  .staff {grid-template-columns: 100%; width: auto !important;}
   .school-name {font-size: 5vw}
   .address {font-size: 2vw}
   .credit {font-size: 2.5vw}
