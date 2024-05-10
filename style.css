@@ -33,8 +33,7 @@ nav {background-color: rgba(255, 255, 255, calc(0.5 + 0.5*var(--scrollRatio))); 
     var(--fs-d) var(--fs-dn) var(--fs-blur) var(--main-yellow)
     ;
 }
-
-
+.subtitles {margin-top: 3vh;}
 #nav-wrapper {background-color: var(--main-blue); width: 100%; height: var(--wrapper-height); position: fixed; z-index: 98; border-bottom: var(--border-style);}
 .nav-vars {
   --scrollRatio: 0;
@@ -55,7 +54,7 @@ nav {background-color: rgba(255, 255, 255, calc(0.5 + 0.5*var(--scrollRatio))); 
 #menu li {-webkit-flex-grow: 2; flex-grow: 2; height: var(--menu-height)}
 #menu {display: -webkit-flex; display: flex; -webkit-justify-content: center; justify-content: center;}
 #menu, #menu li li {list-style: none;}
-#menu a {height: inherit; color: var(--main-blue); display: flex; align-items: center; justify-content: center; text-decoration: none; background-color: white; font-size: 16px; font-size: 2rem}
+#menu a {height: inherit; color: var(--main-blue); display: flex; align-items: center; justify-content: center; text-decoration: none; background-color: white; font-size: 16px; font-size: 2rem; cursor: pointer}
 #menu>li {margin: 0 0.5vw; position: relative; border-top: var(--border-style); border-bottom: none; margin-top: calc(-1*var(--border-width))}
 #menu>li:first-of-type {margin-left:var(--menu-border-margin);}
 #menu>li:last-of-type {margin-right: var(--menu-border-margin);}
@@ -73,14 +72,15 @@ main>div>div {width: calc(100% - 3*var(--border-width)); border-left: var(--bord
 h2 {font-family: 'Josefin Sans'; margin: 3vh 0 2vh 0; font-size: 40px; font-size: 5rem; text-align: center; color: var(--main-blue)}
 h3 {font-family: 'Josefin Sans'; color: var(--main-blue); font-size: 24px; font-size: 3rem}
 p {font-family: 'Questrial'; font-size: 16px; font-size: 2rem;}
+.text p b {font-size: 20px; font-size: 2.5rem; font-weight: 900; color: var(--main-blue)}
 .items {width: calc(100% - 8px - 2vw); height: auto;  background-color: var(--main-blue); border: var(--border-style); display: flex; margin: 2vh 0 2vh 0;}
 .items:first-of-type {margin-top: 0}
-.items>* {width: calc(100%); margin: 1vh 0.5vw 1vh 0.5vw; border: var(--border-style); border-left: none; border-right: none; }
+.items>* {width: 100%; margin: 1vh 0.5vw 1vh 0.5vw; border: var(--border-style); border-left: none; border-right: none; }
 .items>*:first-child {margin-left: 1vw !important; margin-right: 0.5vw}
 .items>*:last-child {margin-left: 0.5vw; margin-right: 1vw !important;}
 .items .text {background-color: white; }
-.items figure {color: white; font-size: 5vh; position: relative; display: flex; align-items: center; justify-content: center;}
-.items figure img {width: 100%; max-height: calc(100%-2vh)}
+.items>figure {color: white; font-size: 5vh; position: relative; display: flex; align-items: center; justify-content: center;}
+.items>figure img {width: 100%; max-height: calc(100%-2vh)}
 .text h3 {width: calc(100% - 2vmin); margin-left: 1vmin}
 .text p {width: calc(100% - 2vmin); margin-left: 1vmin}
 .staff {border-left: unset; border-right: unset; display: grid; grid-template-columns: 50% 50%; width: 100% !important; margin: 1vh 1vw 1vh 1vw !important; border: var(--border-style); column-gap: 1vw; row-gap: 2vh; border-top: none; border-bottom: none;}
@@ -119,7 +119,7 @@ footer>div {margin: 4vh 3vw 4vh 3vw; display: flex; justify-content: center; fle
   #items img {height: calc(12vw + 24vw*var(--scrollRatio))}
   main>div {width: calc(100% - 6vw + var(--border-width))}
   .items {flex-direction: column}
-  .items>* {margin: 1vh 1vw 1vh 1vw; width: 100%}
+  .items>* {margin: 1vh 1vw 1vh 1vw; width: auto}
   .items>*:first-of-type {margin: 1vh 1vw 1vh 1vw}
   .items>*:last-of-type {margin: 1vh 1vw 1vh 1vw}
   .staff {grid-template-columns: 100%}
