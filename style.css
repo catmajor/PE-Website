@@ -11,6 +11,8 @@
 
 html {height: 100%; width: 100%; padding: 0; margin: 0; font-size: 62.5%; scroll-padding-top: var(--total-min-height)}
 .hidden {display: none; opacity: 0}
+.pc-only {display: var(--display-type) !important;}
+.mobile-only {display: none !important;}
 body {padding: 0; margin: 0; background-color: white}
 h1 {font-family: 'Josefin Sans'; color: var(--main-blue)}
 nav {background-color: rgba(255, 255, 255, calc(0.5 + 0.5*var(--scrollRatio))); height: var(--nav-height); top: var(--nav-margin-top); width: calc(100% - 2vw); left: calc(1vw); border: var(--border-style); display: flex; align-items: center; position: fixed; z-index: 99; border-left: none; border-right: none}
@@ -55,6 +57,7 @@ nav {background-color: rgba(255, 255, 255, calc(0.5 + 0.5*var(--scrollRatio))); 
 #menu {display: -webkit-flex; display: flex; -webkit-justify-content: center; justify-content: center;}
 #menu, #menu li li {list-style: none;}
 #menu a {height: inherit; color: var(--main-blue); display: flex; align-items: center; justify-content: center; text-decoration: none; background-color: white; font-size: 16px; font-size: 2rem; cursor: pointer}
+#menu>li>a {--display-type: flex; }
 #menu>li {margin: 0 0.5vw; position: relative; border-top: var(--border-style); border-bottom: none; margin-top: calc(-1*var(--border-width))}
 #menu>li:first-of-type {margin-left:var(--menu-border-margin);}
 #menu>li:last-of-type {margin-right: var(--menu-border-margin);}
@@ -120,6 +123,8 @@ footer>div {margin: 4vh 3vw 4vh 3vw; display: flex; justify-content: center; fle
     --total-max-height: calc((50vh + 1vh + 1vh + 2*var(--border-width)) + (8vh + var(--border-width)));
     --total-min-height: calc(10vh + 1vh + 0vh + 2*var(--border-width) + 8vh)
   }
+  .pc-only {display: none !important;}
+  .mobile-only {display: var(--display-type) !important;}
   #items h1 {font-size: calc(4.8vw + 9.6vw*var(--scrollRatio)); margin-left: calc(-1*(3vw + 7vw*var(--scrollRatio))); margin-bottom: calc(3vw + 3.5vw*var(--scrollRatio))}
   #items img {height: calc(12vw + 24vw*var(--scrollRatio))}
   main>div {width: calc(100% - 6vw + var(--border-width))}
