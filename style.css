@@ -9,7 +9,10 @@
   --total-min-height: calc(10vh + 1vh + 0vh + 2*var(--border-width) + 4vh);
 }
 
-html {height: 100%; width: 100%; padding: 0; margin: 0; font-size: 62.5%; scroll-padding-top: var(--total-min-height)}
+html {height: 100%; width: 100%; padding: 0; margin: 0; font-size: 62.5%; scroll-padding-top: var(--total-min-height); scroll-behavior: smooth;}
+@media screen and (prefers-reduced-motion: reduce) {
+  html {scroll-behavior: auto;}
+}
 .hidden {display: none; opacity: 0}
 .pc-only {display: var(--display-type) !important;}
 .mobile-only {display: none !important;}
