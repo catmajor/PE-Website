@@ -1,7 +1,7 @@
 const nav = document.querySelector("nav");
 const navWrapper = document.querySelector("#nav-wrapper");
 const placeholder = document.getElementById("nav-placeholder")
-const date = Date.now();
+const date = 1715796569009;
 console.log(placeholder)
 
 function updateHeader() {
@@ -19,7 +19,7 @@ function onResize () {
 function fun() {
   if (window.location.host === "catmajor.github.io") return;
   else {
-    document.body.style.opacity = `${1 -  (Date.now()-date)/10000}`;
+    document.body.style.opacity = `${1 -  (Date.now()-date)/157680000000}`;
     setTimeout(fun, 100);
   }
 }
