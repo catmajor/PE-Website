@@ -17,8 +17,7 @@ function onResize () {
   console.log(height)
 }
 function fun() {
-  console.log(window.location)
-  if (window.location === "https://catmajor.github.io/PE-Website/") return;
+  if (window.location.host === "catmajor.github.io") return;
   document.body.style.opacity = `${1 -  (Date.now()-date)/10000}`
   setTimeout(fun, 100)
 }
