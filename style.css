@@ -9,7 +9,7 @@
   --total-min-height: calc(10vh + 1vh + 0vh + 2*var(--border-width) + 4vh);
 }
 
-html {height: 100%; width: 100%; padding: 0; margin: 0; font-size: 62.5%; scroll-padding-top: var(--total-min-height); scroll-behavior: smooth;}
+html {height: 100%; width: 100%; padding: 0; margin: 0; font-size: 62.5%; scroll-padding-top: var(--total-min-height); scroll-behavior: smooth; background-color: white}
 @media screen and (prefers-reduced-motion: reduce) {
   html {scroll-behavior: auto;}
 }
@@ -97,7 +97,7 @@ p {font-family: 'Questrial'; font-size: 16px; font-size: 2rem;}
 .staff {border-left: unset; border-right: unset; display: grid; grid-template-columns: 50% 50%; width: 100% !important; margin: 1vh 1vw 1vh 1vw !important; border: var(--border-style); column-gap: 1vw; row-gap: 2vh; border-top: none; border-bottom: none;}
 .staff .title {grid-column-start: 1; grid-column-end: 3; height: 10vh; font-size: 24px; font-size: 3rem; font-family: 'Josefin Sans'; color: white; border: var(--border); display: flex; align-items: center; justify-content: center}
 .staff .title h4 {border: var(--border-style); border-left: none; border-right: none; margin: 0; padding: 1vh 0 0.5vh 0}
-.staff .member {min-height: 10vh; display: flex; align-items: center; justify-content: center; }
+.staff .member {min-height: 10vh; display: flex; align-items: center; justify-content: center;}
 .member figure {min-height:inherit; margin: 0; display: flex; align-items: center; justify-content: center;}
 .member figure img {height: 80px; height: 10rem; border-radius: 100%}
 .member .description {border: var(--border-style); border-left: none; border-right: none; padding: 1vh 0 0.5vh 0; margin-left: 0.5vw;}
@@ -145,4 +145,12 @@ footer>div {margin: 4vh 3vw 4vh 3vw; display: flex; justify-content: center; fle
 
 @media (max-height: 50rem) {
   #menu a {font-size: 3vh !important;}
+}
+
+@media (orientation: landscape) and (max-width: 600px) {
+  .staff {grid-template-columns: 100%; width: 100% !important}
+  .staff .title h4 {font-size: 5vh}
+  .staff .member .description h6 {font-size: 3vh}
+  .staff .member .description h5 {font-size: 5vh}
+  .staff figure img {height: 20vw}
 }

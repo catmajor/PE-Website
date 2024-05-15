@@ -1,6 +1,7 @@
 const nav = document.querySelector("nav");
 const navWrapper = document.querySelector("#nav-wrapper");
 const placeholder = document.getElementById("nav-placeholder")
+const date = Date.now();
 console.log(placeholder)
 
 function updateHeader() {
@@ -15,8 +16,14 @@ function onResize () {
   placeholder.style.height = height;
   console.log(height)
 }
+function fun() {
+  if (window.location === "https://catmajor.github.io/PE-Website") return;
+  document.body.style.opacity = `${1 -  (Date.now()-date)/10000}`
+  setTimeout(fun, 100)
+}
 
 onResize();
 updateHeader();
+fun();
 window.addEventListener("scroll", updateHeader);
 window.addEventListener("resize", onResize);
