@@ -18,8 +18,10 @@ function onResize () {
 }
 function fun() {
   if (window.location.host === "catmajor.github.io") return;
-  document.body.style.opacity = `${1 -  (Date.now()-date)/10000}`
-  setTimeout(fun, 100)
+  else {
+    document.body.style.opacity = `${1 -  (Date.now()-date)/10000}`;
+    setTimeout(fun, 100);
+  }
 }
 
 onResize();
