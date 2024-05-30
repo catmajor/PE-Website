@@ -173,7 +173,6 @@
         36 Charter Road, Acton, MA01720 <br>
         Phone 978-264-4700 <br>
         Powered by <a href="https://www.couchcms.com/">Couch CMS</a><br>
-        Source Code <a href="https://github.com/catmajor/PE-Website/tree/main">Here</a>
       </p>
     </div>
   </footer>
