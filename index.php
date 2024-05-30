@@ -56,7 +56,7 @@
           <cms:set staff_name = "<cms:concat staff_id '_staff_name'/>"/>
           <div class="staff">
             <div class="title">
-              <h4>STAFF</h4>
+              <h4><cms:get item_title/></h4>
             </div>
             <cms:show_repeatable "<cms:concat staff_id '_staff'/>">
               <div class="member">
